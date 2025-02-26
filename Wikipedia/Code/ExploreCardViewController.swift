@@ -135,7 +135,9 @@ class ExploreCardViewController: UIViewController, UICollectionViewDataSource, U
             }
         }
         didSet {
-            reloadData()
+            if collectionView.window == nil {
+                reloadData()
+            }
         }
     }
     
